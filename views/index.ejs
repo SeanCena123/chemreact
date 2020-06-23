@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<title> VCE Organic Chemistry </title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body id="wrapper" class="bg-light" style="margin: 10px;">
+
+<div> 
+<nav class="navbar fixed-top navbar-light bg-dark">
+  <a class="navbar-brand" href="#" style="color: white;">VCE Organic Chemistry Functional Groups</a>
+</nav> <br><br> <br>    
+
+<h2 style="margin-left: 16px"> Functional Groups Reaction Pathway </h2> 
+<div class="card text-center">
+  <div class="card-header" style="text-align: left">
+    How to use:
+  </div>
+  <div style="text-align: left">
+  <div class="card-body">
+    <h5 class="card-title">Use the following functional groups to determine the reaction pathway.</h5>
+    <li> alkane </li> 
+    <li> chloro (chloroalkane) [R-Cl] </li> 
+    <li> alkene </li> 
+    <li> dichloro (dichloroalkane) </li> 
+    <li> alcohol [R-OH] </li> 
+    <li> aldehyde [R-C=OH] </li> 
+    <li> carbox (carboxylic acid) [R-C=OOH] </li> 
+    <li> ketone [R-C=OR'] </li> 
+    <li> carbox/ester [R-C=OOR'] </li> 
+    <li> combustion </li> 
+    <li> alkyne </li> 
+    <li> alcohol/ester [R-C=OOR'] </li> <br>
+    <h7 class="card-title"> Note: The reaction shown in the box is the fastest possible pathway. Additional pathways can be identified through the browser console.</h7>
+  </div>
+</div>
+  </div> <br>
+
+
+<!--     <div> Reactant <input id="first-group"> </input> </div>  <br>  -->
+<div>  <input type="text" id="first-group" onkeyup="popupshow(0);" placeholder="Search Reactant" title="Type in a name"></input> </div>
+<table id="myTable"></table>
+<br>
+
+<div>  <input type="text" id="second-group" onkeyup="popupshow(1); goToFirst2();" placeholder="Search Product" title="Type in a name"></input> </div>
+<table id="myTable2"></table> <br>
+
+    <button id="listreactionbutton" class="btn btn-secondary" onkeyup="goToFirst();" onclick="listreactions();"> Find Reaction </button> <br> <br>
+
+ 
+<div class="card text-center">
+  <div class="card-header" style="text-align: left">
+    Reaction Pathway:
+  </div>
+  <div style="text-align: left">
+  <div class="card-body">
+    <h5 class="card-title" id="pathway-result"></h5>
+  </div>
+</div>
+  </div> <br>
+</div>
+
+<script type="text/javascript" src="js/load.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+
+</body>
+</html>
